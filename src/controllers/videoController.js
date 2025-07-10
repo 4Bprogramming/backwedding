@@ -6,7 +6,7 @@ export const saveVideoToDatabase = async ({ name, description, video, type, fold
   return videoCreated;
 };
 
-import { Video } from '../models'; // o tu modelo real
+// import { Video } from '../models'; // o tu modelo real
 
 export const deleteVideoFromDatabase = async (publicId) => {
   const deleted = await Video.destroy({
