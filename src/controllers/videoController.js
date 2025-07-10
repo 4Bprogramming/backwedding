@@ -1,6 +1,21 @@
 import { Video } from "../models/Videos.js";
 
 
+export const saveVideoToDatabase = async ({ name, description, video, type, folder }) => {
+  const videoCreated = await Video.create({ name, description, video, type, folder });
+  return videoCreated;
+};
+
+import { Video } from '../models'; // o tu modelo real
+
+export const deleteVideoFromDatabase = async (publicId) => {
+  const deleted = await Video.destroy({
+    where: {
+      name: `${publicId}.mp4` // o según tu lógica de nombre
+    },
+  });
+  return deleted;
+};
 
 
 

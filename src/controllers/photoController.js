@@ -1,5 +1,20 @@
 import { Photos } from "../models/photos.js";
 
+
+export const savePhotoToDatabase = async ({ name, description, img, type, folder }) => {
+  const photoCreated = await Photos.create({ name, description, img, type, folder });
+  return photoCreated;
+};
+
+export const deletePhotoFromDatabase = async (publicId) => {
+  const deleted = await Photo.destroy({
+    where: {
+      name: `${publicId}.jpg` // o ajustalo según cómo guardás el nombre
+    },
+  });
+  return deleted;
+};
+
 export const createPhoto = async (req, res) => {
   try {
     const photoCreated = await Photos.create({ ...req.body });

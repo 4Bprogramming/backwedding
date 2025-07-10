@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import userRoute from './routes/user.routes.js'
 import videoRoute from './routes/videos.routes.js'
 import photoRoute from './routes/photo.routes.js'
+import cloudinaryRouter from "./routes/cloudinary.routes.js";
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 app.use(userRoute);
 app.use(videoRoute);
 app.use(photoRoute);
+app.use(cloudinaryRouter)
 
 
 

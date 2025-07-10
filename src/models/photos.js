@@ -22,7 +22,14 @@ export const Photos = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-   
+   type: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  folder: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   },
   {
     timestamps: false,
