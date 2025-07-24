@@ -14,7 +14,7 @@ export const Video = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    description: { 
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -29,7 +29,17 @@ export const Video = sequelize.define(
     folder: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    publicId: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    deleted: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+    },
+
   },
   {
     timestamps: false,

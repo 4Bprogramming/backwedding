@@ -16,12 +16,12 @@ export const Photos = sequelize.define(
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false, 
     },
     img: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+    }, 
    type: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -30,6 +30,15 @@ export const Photos = sequelize.define(
     type: DataTypes.STRING,
     allowNull: false,
   },
+  publicId: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  deleted: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+    },
   },
   {
     timestamps: false,

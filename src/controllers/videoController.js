@@ -1,8 +1,8 @@
 import { Video } from "../models/Videos.js";
 
 
-export const saveVideoToDatabase = async ({ name, description, video, type, folder }) => {
-  const videoCreated = await Video.create({ name, description, video, type, folder });
+export const saveVideoToDatabase = async ({ name, description, video, type, folder, publicId }) => {
+  const videoCreated = await Video.create({ name, description, video, type, folder, publicId });
   return videoCreated;
 };
 
